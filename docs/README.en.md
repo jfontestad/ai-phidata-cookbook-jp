@@ -1,52 +1,40 @@
----
-title: HarmonAI III
-emoji: 🦀
-colorFrom: green
-colorTo: blue
-sdk: streamlit
-sdk_version: 1.39.0
-app_file: app.py
-pinned: false
-license: mit
----
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/HarmonAI_III/refs/heads/main/docs/HarmonAI-III.png" width="100%">
-  <h1 align="center">🌟 HarmonAI III 🌟</h1>
+  <img src="docs/phidata-cookbook-jp.png" width="100%">
+  <h1 align="center">🌟 phidata-cookbook-jp 🌟</h1>
 </p>
 <p align="center">
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III">
-    <img alt="GitHub Repo" src="https://img.shields.io/badge/github-HarmonAI__III-blue?logo=github">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp">
+    <img alt="GitHub Repo" src="https://img.shields.io/badge/github-phidata--cookbook--jp-blue?logo=github">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/Sunwood-ai-labs/HarmonAI_III?color=green">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/Sunwood-ai-labs/phidata-cookbook-jp?color=green">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Sunwood-ai-labs/HarmonAI_III?style=social">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Sunwood-ai-labs/phidata-cookbook-jp?style=social">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/releases">
-    <img alt="GitHub release" src="https://img.shields.io/github/v/release/Sunwood-ai-labs/HarmonAI_III?include_prereleases&style=flat-square">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/releases">
+    <img alt="GitHub release" src="https://img.shields.io/github/v/release/Sunwood-ai-labs/phidata-cookbook-jp?include_prereleases&style=flat-square">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Sunwood-ai-labs/HarmonAI_III">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Sunwood-ai-labs/phidata-cookbook-jp">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/pulls">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/pulls">
     <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/network/members">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Sunwood-ai-labs/HarmonAI_III?style=social">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/network/members">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Sunwood-ai-labs/phidata-cookbook-jp?style=social">
   </a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/watchers">
-    <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/Sunwood-ai-labs/HarmonAI_III?style=social">
+  <a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/watchers">
+    <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/Sunwood-ai-labs/phidata-cookbook-jp?style=social">
   </a>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Sunwood-ai-labs/HarmonAI_III">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Sunwood-ai-labs/HarmonAI_III">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Sunwood-ai-labs/phidata-cookbook-jp">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Sunwood-ai-labs/phidata-cookbook-jp">
 </p>
 <h2 align="center">
-  ～ AI-Powered Automated Repository Management Template ～
+  ～ phidata Cookbook Japanese Explanation Project ～
 
-<a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/blob/main/README.md"><img src="https://img.shields.io/badge/ドキュメント-日本語-white.svg" alt="JA doc"/></a>
-<a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/blob/main/docs/README.en.md"><img src="https://img.shields.io/badge/english-document-white.svg" alt="EN doc"></a>
+<a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/blob/main/README.md"><img src="https://img.shields.io/badge/ドキュメント-日本語-white.svg" alt="JA doc"/></a>
+<a href="https://github.com/Sunwood-ai-labs/phidata-cookbook-jp/blob/main/docs/README.en.md"><img src="https://img.shields.io/badge/english-document-white.svg" alt="EN doc"></a>
 </h2>
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python" alt="Python">
@@ -58,179 +46,114 @@ license: mit
   <img src="https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml" alt="YAML">
   <img src="https://img.shields.io/badge/pip-3775A9?style=for-the-badge&logo=pypi" alt="pip">
   <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown" alt="Markdown">
-  <img src="https://img.shields.io/badge/GitHub_API-181717?style=for-the-badge&logo=github" alt="GitHub API">
+  <img src="https://img.shields.io/badge/phidata-FF6B6B?style=for-the-badge" alt="phidata">
 </p>
-<p align="center">
-  <a href="https://github.com/Sunwood-ai-labs/AIRA">
-    <img src="https://img.shields.io/badge/AIRA-FF4500?style=for-the-badge&logo=github" alt="AIRA">
-  </a>
-  <a href="https://github.com/Sunwood-ai-labs/IRIS">
-    <img src="https://img.shields.io/badge/IRIS-9370DB?style=for-the-badge&logo=github" alt="IRIS">
-  </a>
-</p>
-
 
 > [!IMPORTANT]
-> HarmonAI III is a template repository developed using [cline (formerly Claude Dev)](https://github.com/clinebot/cline), [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage), and [claude.ai](https://claude.ai/).  The majority of the release notes, README, and commit messages were generated using the latest AI technology.
+> This repository provides a Japanese explanation and improved organization of the official [phidata](https://github.com/phidatahq/phidata) cookbook. It offers practical sample code and detailed explanations for AI development.
 
 ## 🚀 Project Overview
 
-HarmonAI III is an innovative **AI repository starter kit** integrating AIRA and IRIS. This repository aims to dramatically improve developer efficiency by providing the structure and workflow for AI development projects leveraging LLMs. Version: `v1.3.0`
-
+phidata-cookbook-jp is a project that provides detailed explanations in Japanese for the phidata cookbook sample collection.  It focuses particularly on the implementation of AI agents, offering a step-by-step learning structure from basic to advanced concepts. Version: `v1.0.0`
 
 ## 🆕 Latest News
 
-- 🎉 **v1.3.0 Released**:  Created a basic Streamlit app structure, improved README file design, fixed several bugs, and updated the documentation. The Streamlit app now includes a feature to display the contents of the README.md file. Error handling for cases where the README.md file is missing has also been added.  Furthermore, we've added a collaborator addition script for the GitHub repository, an automated synchronization workflow with Hugging Face Hub, and an automated deployment workflow to PyPI.
-
+- 🎉 **v1.0.0 Release**:  All sample code in the cookbook's `agents` folder has been translated into Japanese, with detailed explanations added.
+  - Provides 23 examples of AI agent implementations, ranging from web search to image generation.
+  - Detailed Japanese comments have been added to each code snippet.
+  - A step-by-step guide for setup and execution has been created.
 
 ## ✨ Main Features
 
-1. **Integrated AI Toolset**: Provides the functionalities of AIRA and IRIS in a single package.
-2. **Ready to Use**: Easily create a repository with a high-quality initial structure by using it as a template.
-3. **Automated Development Workflow**: Automates commit message generation, release note creation, and issue management.
-4. **Multilingual Support**: Supports international project deployment through automated README translation.
-5. **Flexible Customization**: Easily adjustable to suit the needs of your project.
-6. **Automated Collaborator Invitation**: Collaborator invitation script using the GitHub API.
-7. **Streamlit App**: A basic Streamlit application that displays the README.md file.
-
-
-## 🔧 How to Use
-
-### Running the Streamlit App
-1. Install the necessary packages with `pip install -r requirements.txt`.
-2. Run `streamlit run app.py`.
-
-### AIRA Example:
-```bash
-aira --mode sourcesage commit  --config=.aira\config.dev.commit.yml --ss-model-name="gpt-4o-mini" --llm-output="llm_output.md"
-```
-
-### IRIS Example:
-
-Refer to the documentation of each component for detailed usage instructions.
-
+1. **Detailed Japanese Explanations**: Detailed comments and explanations have been added to each sample code.
+2. **Practical Samples**: Provides 23 examples of AI agent implementations.
+3. **Step-by-Step Learning Structure**:  Allows for learning progressively from basic to advanced concepts.
+4. **Environment Setup Guide**: Explains how to set up necessary tools and APIs.
+5. **Detailed Execution Instructions**:  Provides specific instructions on how to run each sample.
 
 ## 📦 Installation Instructions
 
-1. Use this repository as a template to create a new repository.
-2. Clone the repository locally.
-3. Install the necessary dependencies:
+1. Clone the repository:
    ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/your-username/phidata-cookbook-jp.git
+   cd phidata-cookbook-jp
    ```
-4. Customize the AIRA and IRIS configuration files.
-5. Check the GitHub Actions settings and configure environment variables as needed.
-6. Open the `.github/release_notes/.sourcesage_releasenotes_iris.yml` file and change the value of `repo-name:` to your new repository name.
 
-
-## 🌿 Environment Setup
-
-Follow these steps to set up the HarmonAI III environment:
-
-1. Create a virtual environment:
+2. Create and activate a virtual environment:
    ```bash
-   python3 -m venv .venv
-   ```
-   This creates a virtual environment in the `.venv` directory.
-
-2. Activate the virtual environment:
-   ```bash
+   python -m venv .venv
    source .venv/bin/activate  # Linux/macOS
-   .venv\Scripts\activate  # Windows
+   .venv\Scripts\activate     # Windows
    ```
 
-3. Install dependencies:
+3. Install dependent packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-These steps will prepare your development environment for HarmonAI III.
-
-
-## 📚 Main Components
-
-### 🤖 [AIRA (AI-Integrated Repository for Accelerated Development)](https://github.com/Sunwood-ai-labs/AIRA)
-- Automated repository creation
-- Automated commit message generation
-
-### 🌈 [IRIS (Intelligent Repository Issue Solver)](https://github.com/Sunwood-ai-labs/IRIS)
-- Automated issue classification
-- Automated solution suggestion
-- Automated release note generation
-- Automated README translation
-
-## 🤝 Automated Collaborator Invitation
-
-HarmonAI III includes a script to automatically invite collaborators to the GitHub repository.  Use it with the following steps:
-
-1. Create a `.env` file and set the necessary tokens:
-   ```
-   # GitHub access token (for collaborator invitation)
-   GITHUB_TOKEN=your_github_personal_access_token_here
-
-   # The following are examples of tokens that may be used by other functions.  It's convenient to have them written down for later use.
-   # GITHUB_ACCESS_TOKEN=ghp_xxxxx
-   # YOUR_PERSONAL_ACCESS_TOKEN_IRIS=ghp_yyyyy
-   # GEMINI_API_KEY=AIzzzzz
-   ```
-
-   Note: Include the `.env` file in `.gitignore` to prevent it from being committed to the repository.
-
-2. Run the following command to invite collaborators:
+4. Set environment variables:
    ```bash
-   python .github/github_add_collaborator.py Sunwood-ai-labs/HarmonAI_III username_to_invite
+   cp .env.example .env
+   # Edit the .env file and set the necessary API keys.
    ```
 
-   Replace `username_to_invite` with the GitHub username you want to invite.
+## 🌿 Project Structure
 
-3. Once the script runs successfully, a collaborator invitation will be sent to the specified user.
-
-Cautions:
-- This script requires the GitHub token to have the appropriate permissions (`repo` scope).
-- When using it for an organization's repository, ensure that appropriate permissions are granted in the organization's settings.
-- For security, update tokens regularly and grant only the minimum necessary permissions.
-- Never commit information, including the `.env` file and tokens, to a public repository.
-
-This feature simplifies the process of adding new contributors to your project.  You can efficiently expand your team while maintaining security.
-
-## 🐈 Processing Flow
-
-
-```mermaid
-%%{init:{'theme':'base','themeVariables':{'primaryColor':'#024959','primaryTextColor':'#F2C335','primaryBorderColor':'#F2AE30','lineColor':'#A1A2A6','secondaryColor':'#593E25','tertiaryColor':'#F2C335','noteTextColor':'#024959','noteBkgColor':'#F2C335','textColor':'#024959','fontSize':'18px'}}}%%
-
-graph LR
-    A[Start] --> B[Repository Conception and Naming]
-    B -->|Human Action| C[HarmonAI III Repository Initialization]
-    C -->|Automated| D[Development Work]
-    D -->|Human Action| E[AIRA Automated Commits]
-    E --> H[IRIS Release Note Creation]
-    H --> I[IRIS Documentation Translation]
-    I --> J[Release]
-    J --> K[End]
-
-    class B,D,G human;
-    class E aira;
-    class F,H,I iris;
-    class C auto;
-    class A,J,K process;
-
+```plaintext
+cookbook/
+├─ agents/               # Collection of AI agent samples
+│  ├─ 01_web_search.py  # Web search agent
+│  ├─ 02_finance_agent.py # Financial analysis agent
+│  ├─ ...               # Other agent implementations
+├─ app.py              # Streamlit application
+├─ README.md           # Project description
+└─ requirements.txt    # Dependency package list
 ```
 
+## 📚 Learning Content
 
+The `agents` folder in the cookbook includes examples such as:
+
+1. **Basic Agent Implementations**
+   - Web search agent
+   - Financial analysis agent
+   - Agent team
+
+2. **Advanced Feature Implementations**
+   - RAG (Retrieval Augmented Generation)
+   - Image generation and analysis
+   - Structured data processing
+
+3. **Practical Applications**
+   - CLI application
+   - Video generation system
+   - Data analysis tool
+
+See [agents/README.md](cookbook/agents/README.md) for details.
 
 ## 🤝 Contributions
 
-HarmonAI III welcomes contributions from the community as an open-source project. Please help improve this template repository through bug reports, feature requests, and pull requests.
+Contributions to this project are welcome:
+
+- Report bugs and suggest features via Issues.
+- Improve the code via Pull Requests.
+- Suggestions for improving explanations and new sample contributions are also welcome.
 
 ## 📄 License
 
-HarmonAI III is licensed under the [MIT License](LICENSE).
+This project is provided under the MIT License.
 
-## 🙏 Acknowledgements
+## 🙏 Acknowledgments
 
-HarmonAI III has drawn inspiration from many open-source projects during its development. We extend our deepest gratitude to the developers of AIRA and IRIS, in particular.  We also thank iris-s-coon and Maki.
+- Thanks to the [phidata](https://github.com/phidatahq/phidata) team for providing excellent implementation examples.
+- Thanks to all contributors.
+
+## 🔗 Related Links
+
+- [phidata Official Documentation](https://docs.phidata.com)
+- [phidata GitHub](https://github.com/phidatahq/phidata)
+- [Community Forum](https://community.phidata.com/)
 
 ---
 
-HarmonAI III is an excellent starter kit for achieving an AI-driven development process.  Start developing innovative AI projects based on this template!
+Learn practical AI agent development skills with phidata-cookbook-jp!
