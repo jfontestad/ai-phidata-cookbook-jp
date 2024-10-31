@@ -50,32 +50,31 @@
 </p>
 
 > [!IMPORTANT]
-> This repository provides a Japanese explanation and improved organization of the official [phidata](https://github.com/phidatahq/phidata) cookbook. It offers practical sample code and detailed explanations for AI development.
+> This repository provides a Japanese explanation and reorganized version of the official [phidata](https://github.com/phidatahq/phidata) cookbook. It offers practical sample code and detailed explanations for AI development.
 
 ## 🚀 Project Overview
 
-phidata-cookbook-jp is a project that provides detailed explanations in Japanese for the phidata cookbook sample collection.  It focuses particularly on the implementation of AI agents, offering a step-by-step learning structure from basic to advanced concepts. Version: `v1.0.0`
+phidata-cookbook-jp is a project that provides detailed explanations in Japanese for the phidata cookbook sample collection.  It focuses particularly on the implementation of AI agents, offering a step-by-step learning structure from basic to advanced concepts. Version: `v0.1.0`
 
 ## 🆕 Latest News
 
-- 🎉 **v1.0.0 Release**:  All sample code in the cookbook's `agents` folder has been translated into Japanese, with detailed explanations added.
-  - Provides 23 examples of AI agent implementations, ranging from web search to image generation.
-  - Detailed Japanese comments have been added to each code snippet.
-  - A step-by-step guide for setup and execution has been created.
+- **v0.1.0 Release**: All sample codes in the `agents` folder of the official phidata cookbook have been translated into Japanese with detailed explanations added.  It provides 23 AI agent implementation examples and a step-by-step guide from setup to execution. The English README has also been updated. The repository name has also been changed. Many new features and improvements have been added.
+
 
 ## ✨ Main Features
 
-1. **Detailed Japanese Explanations**: Detailed comments and explanations have been added to each sample code.
-2. **Practical Samples**: Provides 23 examples of AI agent implementations.
-3. **Step-by-Step Learning Structure**:  Allows for learning progressively from basic to advanced concepts.
-4. **Environment Setup Guide**: Explains how to set up necessary tools and APIs.
-5. **Detailed Execution Instructions**:  Provides specific instructions on how to run each sample.
+- Detailed Japanese explanations: Detailed comments and explanations have been added to each sample code.
+- Practical samples: 23 different AI agent implementation examples are provided.
+- Step-by-step learning structure:  Learn sequentially from basic to advanced concepts.
+- Environment setup guide: Explains how to set up the necessary tools and APIs.
+- Detailed execution instructions:  Specifically explains how to run each sample.
+
 
 ## 📦 Installation Instructions
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/phidata-cookbook-jp.git
+   git clone https://github.com/Sunwood-ai-labs/phidata-cookbook-jp.git
    cd phidata-cookbook-jp
    ```
 
@@ -91,64 +90,41 @@ phidata-cookbook-jp is a project that provides detailed explanations in Japanese
    pip install -r requirements.txt
    ```
 
-4. Set environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit the .env file and set the necessary API keys.
-   ```
+4. Set environment variables: Copy `.env.example` to `.env` and set the necessary API keys, etc.
+
 
 ## 🌿 Project Structure
 
-```plaintext
 cookbook/
 ├─ agents/               # Collection of AI agent samples
 │  ├─ 01_web_search.py  # Web search agent
 │  ├─ 02_finance_agent.py # Financial analysis agent
-│  ├─ ...               # Other agent implementations
+│  ├─ ...               # Other agent implementations (23 in total)
 ├─ app.py              # Streamlit application
-├─ README.md           # Project description
-└─ requirements.txt    # Dependency package list
-```
+├─ requirements.txt    # Dependency package list
+
 
 ## 📚 Learning Content
 
-The `agents` folder in the cookbook includes examples such as:
+The `cookbook/agents` folder contains various AI agent implementation examples. Agents are provided for various tasks, including web search, financial analysis, image generation, and video generation.  See the comments in each file and `cookbook/agents/README.md` for details.
 
-1. **Basic Agent Implementations**
-   - Web search agent
-   - Financial analysis agent
-   - Agent team
-
-2. **Advanced Feature Implementations**
-   - RAG (Retrieval Augmented Generation)
-   - Image generation and analysis
-   - Structured data processing
-
-3. **Practical Applications**
-   - CLI application
-   - Video generation system
-   - Data analysis tool
-
-See [agents/README.md](cookbook/agents/README.md) for details.
 
 ## 🤝 Contributions
 
-Contributions to this project are welcome:
+Contributions to this project are welcome. We welcome various contributions such as bug reports, feature suggestions, code improvements, explanation improvements, and suggestions for new samples via GitHub Issues and Pull Requests.
 
-- Report bugs and suggest features via Issues.
-- Improve the code via Pull Requests.
-- Suggestions for improving explanations and new sample contributions are also welcome.
 
 ## 📄 License
 
 This project is provided under the MIT License.
 
-## 🙏 Acknowledgments
 
-- Thanks to the [phidata](https://github.com/phidatahq/phidata) team for providing excellent implementation examples.
-- Thanks to all contributors.
+## 🙏 Acknowledgements
 
-## 🔗 Related Links
+- iris-s-coon
+- Maki 
+
+## 🔗 Reference Links
 
 - [phidata Official Documentation](https://docs.phidata.com)
 - [phidata GitHub](https://github.com/phidatahq/phidata)
