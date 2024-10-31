@@ -1,4 +1,12 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/phidata-cookbook-jp/refs/heads/main/docs/74ccfadcf3dc58a1d3d695087ba3c01e8818ff97ebb8457de21a464e.png" width="100%">
+
 # 🚀 phidata Agents クックブック
+
+</div>
+
+
+
 
 このリポジトリは、[phidata](https://github.com/phidatahq/phidata)のAgentsサンプル集を日本語化し、実践的なチュートリアルとして再構成したものです。AIエージェントの基本から応用まで、ステップバイステップで学ぶことができます。
 
