@@ -5,9 +5,6 @@
 
 </div>
 
-
-
-
 このリポジトリは、[phidata](https://github.com/phidatahq/phidata)のAgentsサンプル集を日本語化し、実践的なチュートリアルとして再構成したものです。AIエージェントの基本から応用まで、ステップバイステップで学ぶことができます。
 
 ## 📚 学習コンテンツ
@@ -150,8 +147,16 @@ git clone https://github.com/your-username/phidata-cookbook-jp.git
 
 2. 依存パッケージのインストール:
 ```bash
-pip install -r requirements.txt
+PS C:\Prj\phidata-cookbook-jp> uv venv 
+Using Python 3.10.15
+Creating virtualenv at: .venv
+Activate with: .venv\Scripts\activate
+PS C:\Prj\phidata-cookbook-jp> .venv\Scripts\activate
+(phidata-cookbook-jp) PS C:\Prj\phidata-cookbook-jp> uv pip install -U phidata
+
 ```
+
+
 
 3. 環境変数の設定:
 ```bash
