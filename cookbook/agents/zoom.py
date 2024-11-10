@@ -1,100 +1,95 @@
 """
-Zoomミーティング自動スケジューリングエージェントのデモンストレーション
+Demonstration of Zoom meeting auto-scheduling agent
 
-このスクリプトは、Zoom APIを使用して会議を自動的にスケジュールし、
-会議の詳細情報を管理するエージェントの実装例を示します。
+This script demonstrates the implementation of an agent that uses the Zoom API to automatically schedule meetings and manage meeting details.
 
-必要な環境変数:
-- ZOOM_ACCOUNT_ID: ZoomアカウントID
-- ZOOM_CLIENT_ID: ZoomクライアントID
-- ZOOM_CLIENT_SECRET: Zoomクライアントシークレット
+Required environment variables:
+- ZOOM_ACCOUNT_ID: Zoom account ID
+- ZOOM_CLIENT_ID: Zoom client ID
+- ZOOM_CLIENT_SECRET: Zoom client secret
 
-主な機能:
-- Zoomミーティングの自動スケジュール
-- 会議詳細情報の取得と表示
-- エラーハンドリング
+Main features:
+- Automatic scheduling of Zoom meetings
+- Acquisition and display of meeting details
+- Error handling
 """
 
-# 必要なライブラリのインポート
+# Importing required libraries
 import os
 from phi.agent import Agent
 from phi.model.openai import OpenAIChat
 from phi.tools.zoom import ZoomTool
 
-# Zoom API認証情報の取得
+# Get Zoom API authentication information
 ACCOUNT_ID = os.getenv("ZOOM_ACCOUNT_ID")
 CLIENT_ID = os.getenv("ZOOM_CLIENT_ID")
 CLIENT_SECRET = os.getenv("ZOOM_CLIENT_SECRET")
 
-# カスタムZoomツールクラスの定義
+# Define custom Zoom tool class
 class CustomZoomTool(ZoomTool):
-    def schedule_meeting(self, topic: str, start_time: str, duration: int) -> str:
-        """
-        ミーティングをスケジュールし、詳細情報を整形して返却します
-        
-        Parameters:
-            topic (str): ミーティングの題目
-            start_time (str): 開始時刻（ISO 8601形式）
-            duration (int): 所要時間（分）
-        
-        Returns:
-            str: フォーマットされたミーティング情報
-        """
-        response = super().schedule_meeting(topic, start_time, duration)
+def schedule_meeting(self, topic: str, start_time: str, duration: int) -> str:
+"""
+Schedules a meeting and returns formatted details
 
-        if isinstance(response, str):
-            import json
-            try:
-                meeting_info = json.loads(response)
-            except json.JSONDecodeError:
-                return "ミーティング情報の解析に失敗しました。"
-        else:
-            meeting_info = response
+Parameters:
+topic (str): Meeting topic
+start_time (str): Start time (ISO 8601 format)
+duration (int): Duration (min)
 
-        if meeting_info:
-            meeting_id = meeting_info.get("id")
-            join_url = meeting_info.get("join_url")
-            start_time = meeting_info.get("start_time")
-            return (
-                f"ミーティングが正常にスケジュールされました！\n\n"
-                f"**ミーティングID:** {meeting_id}\n"
-                f"**参加URL:** {join_url}\n"
-                f"**開始時刻:** {start_time}"
-            )
-        else:
-            return "申し訳ありません。ミーティングのスケジュールに失敗しました。"
+Returns:
+str: Formatted meeting information
+"""
+response = super().schedule_meeting(topic, start_time, duration)
 
-# Zoomツールのインスタンス化
+if isinstance(response, str):
+import json
+  try:
+meeting_info = json.loads(response)
+except json.JSONDecodeError:
+return "Failed to parse meeting info."
+else:
+meeting_info = response
+if meeting_info:
+meeting_id = meeting_info.get("id")
+join_url = meeting_info.get("join_url")
+start_time = meeting_info.get("start_time")
+return (
+f"Meeting successfully scheduled!\n\n"
+f"**Meeting ID:** {meeting_id}\n"
+f"**Join URL:** {join_url}\n"
+f"**Start time:** {start_time}"
+)
+else:
+return "Sorry, failed to schedule meeting."
+# Instantiate Zoom tool
 zoom_tool = CustomZoomTool(
-    account_id=ACCOUNT_ID,
-    client_id=CLIENT_ID,
-    client_secret=CLIENT_SECRET
+account_id=ACCOUNT_ID,
+client_id=CLIENT_ID,
+client_secret=CLIENT_SECRET
 )
 
-# スケジューリングエージェントの設定
+# Scheduling agent configuration
 agent = Agent(
-    name="Zoom Scheduling Agent",  # エージェント名
-    agent_id="zoom-scheduling-agent",  # エージェントID
-    model=OpenAIChat(id="gpt-4o"),  # GPT-4モデルを使用
-    tools=[zoom_tool],  # カスタムZoomツールを使用
-    markdown=True,  # マークダウン形式での出力を有効化
-    debug_mode=True,  # デバッグモードを有効化
-    show_tool_calls=True,  # ツール呼び出しの表示を有効化
-    instructions=[
-        "ZoomミーティングをスケジュールするためのエージェントとしてZoom APIを使用します。",
-        "ミーティングのスケジュール時には、ZoomToolのschedule_meeting関数を使用します。",
-        "特に指定がない限り、schedule_meeting関数には必要最小限のパラメータのみを渡します。",
-        "スケジュール後は、ミーティングID、参加URL、開始時刻などの詳細情報を提供します。",
-        "時刻は全てISO 8601形式で指定してください（例：'2024-12-28T10:00:00Z'）。",
-        "エラーが発生した場合は適切に対応し、ユーザーに通知します。"
-    ],
-    system_message=(
-        "ユーザーから明示的な指定がない限り、schedule_meeting関数のデフォルトパラメータは"
-        "変更しないでください。ユーザーに確認する前に、必ずミーティングが正常に"
-        "スケジュールされたことを確認してください。"
-    ),
+name="Zoom Scheduling Agent", # Agent name
+agent_id="zoom-scheduling-agent", # Agent ID
+model=OpenAIChat(id="gpt-4o"), # Use GPT-4 model
+tools=[zoom_tool], # Use custom Zoom tool
+markdown=True, # Enable markdown output
+debug_mode=True, # Enable debug mode
+show_tool_calls=True, # Enable display of tool calls
+instructions=[
+"Use the Zoom API as an agent to schedule Zoom meetings.",
+"When scheduling a meeting, use the ZoomTool's schedule_meeting function.",
+"Unless otherwise specified, pass only the minimum required parameters to the schedule_meeting function.",
+"After scheduling, provide details such as the meeting ID, join URL, and start time.",
+"Times are all in ISO format. Please specify in 8601 format (e.g. '2024-12-28T10:00:00Z'). ",
+"If an error occurs, we will respond appropriately and notify the user. "
+],
+system_message=(
+"Do not change the default parameters of the schedule_meeting function unless explicitly requested by the user. Always make sure the meeting has been successfully scheduled before asking the user."
+),
 )
 
-# エージェントを使用してミーティングをスケジュール
-user_input = "「Pythonオートメーション会議」というタイトルで、2024年11月1日の午前11時（UTC）から60分間の会議をスケジュールしてください。"
+# Schedule a meeting using an agent
+user_input = "Schedule a meeting for 60 minutes on November 1, 2024 at 11:00 AM UTC with the title "Python Automation Meeting."
 response = agent.run(user_input)
