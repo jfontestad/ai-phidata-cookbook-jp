@@ -4,79 +4,81 @@ Demonstration of Zoom meeting auto-scheduling agent
 This script demonstrates the implementation of an agent that uses the Zoom API to automatically schedule meetings and manage meeting details.
 
 Required environment variables:
-- ZOOM_ACCOUNT_ID: Zoom account ID
-- ZOOM_CLIENT_ID: Zoom client ID
-- ZOOM_CLIENT_SECRET: Zoom client secret
+ZOOM_ACCOUNT_ID: Zoom account ID
+ZOOM_CLIENT_ID: Zoom client ID
+ZOOM_CLIENT_SECRET: Zoom client secret
 
 Main features:
-- Automatic scheduling of Zoom meetings
-- Acquisition and display of meeting details
-- Error handling
+Automatic scheduling of Zoom meetings
+Acquisition and display of meeting details
+Error handling
 """
 
-# Importing required libraries
+Importing required libraries
 import os
 from phi.agent import Agent
 from phi.model.openai import OpenAIChat
 from phi.tools.zoom import ZoomTool
 
-# Get Zoom API authentication information
+Get Zoom API authentication information
 ACCOUNT_ID = os.getenv("ZOOM_ACCOUNT_ID")
 CLIENT_ID = os.getenv("ZOOM_CLIENT_ID")
 CLIENT_SECRET = os.getenv("ZOOM_CLIENT_SECRET")
 
-# Define custom Zoom tool class
+Define custom Zoom tool class
 class CustomZoomTool(ZoomTool):
 def schedule_meeting(self, topic: str, start_time: str, duration: int) -> str:
 """
 Schedules a meeting and returns formatted details
 
-Parameters:
-topic (str): Meeting topic
-start_time (str): Start time (ISO 8601 format)
-duration (int): Duration (min)
+    Parameters:
+    topic (str): Meeting topic
+    start_time (str): Start time (ISO 8601 format)
+    duration (int): Duration (min)
 
-Returns:
-str: Formatted meeting information
-"""
-response = super().schedule_meeting(topic, start_time, duration)
+    Returns:
+    str: Formatted meeting information
+    """
+    response = super().schedule_meeting(topic, start_time, duration)
 
-if isinstance(response, str):
-import json
-  try:
-meeting_info = json.loads(response)
-except json.JSONDecodeError:
-return "Failed to parse meeting info."
-else:
-meeting_info = response
-if meeting_info:
-meeting_id = meeting_info.get("id")
-join_url = meeting_info.get("join_url")
-start_time = meeting_info.get("start_time")
-return (
-f"Meeting successfully scheduled!\n\n"
-f"**Meeting ID:** {meeting_id}\n"
-f"**Join URL:** {join_url}\n"
-f"**Start time:** {start_time}"
-)
-else:
-return "Sorry, failed to schedule meeting."
-# Instantiate Zoom tool
+    if isinstance(response, str):
+        import json
+        try:
+            meeting_info = json.loads(response)
+        except json.JSONDecodeError:
+            return "Failed to parse meeting info."
+        else:
+            meeting_info = response
+    
+    if meeting_info:
+        meeting_id = meeting_info.get("id")
+        join_url = meeting_info.get("join_url")
+        start_time = meeting_info.get("start_time")
+        return (
+            f"Meeting successfully scheduled!\n\n"
+            f"**Meeting ID:** {meeting_id}\n"
+            f"**Join URL:** {join_url}\n"
+            f"**Start time:** {start_time}"
+        )
+    else:
+        return "Sorry, failed to schedule meeting."
+
+Instantiate Zoom tool
 zoom_tool = CustomZoomTool(
 account_id=ACCOUNT_ID,
 client_id=CLIENT_ID,
 client_secret=CLIENT_SECRET
 )
 
-# Scheduling agent configuration
+Scheduling agent configuration
 agent = Agent(
-name="Zoom Scheduling Agent", # Agent name
-agent_id="zoom-scheduling-agent", # Agent ID
-model=OpenAIChat(id="gpt-4o"), # Use GPT-4 model
-tools=[zoom_tool], # Use custom Zoom tool
-markdown=True, # Enable markdown output
-debug_mode=True, # Enable debug mode
-show_tool_calls=True, # Enable display of tool calls
+name="Zoom Scheduling Agent",  # Agent name
+agent_id="zoom-scheduling-agent",  # Agent ID
+model=OpenAIChat(id="gpt-4o"),  # Use GPT-4 model
+tools=[zoom_tool],  # Use custom Zoom tool
+markdown=True,  # Enable markdown output
+debug_mode=True,  # Enable debug mode
+show_tool_calls=True,  # Enable display of tool calls
 instructions=[
 "Use the Zoom API as an agent to schedule Zoom meetings.",
 "When scheduling a meeting, use the ZoomTool's schedule_meeting function.",
@@ -90,6 +92,6 @@ system_message=(
 ),
 )
 
-# Schedule a meeting using an agent
-user_input = "Schedule a meeting for 60 minutes on November 1, 2024 at 11:00 AM UTC with the title "Python Automation Meeting."
+Schedule a meeting using an agent
+user_input = "Schedule a meeting for 60 minutes on November 1, 2024 at 11:00 AM UTC with the title 'Python Automation Meeting.'"
 response = agent.run(user_input)
