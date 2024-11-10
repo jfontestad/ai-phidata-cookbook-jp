@@ -1,17 +1,15 @@
 """
-DuckDBを使用した映画データ分析システム
+Movie data analysis system using DuckDB
 
-このスクリプトは、DuckDBを使用してIMDBの映画データを
-分析し、統計情報をアスキーアートで可視化する
-データアナリストエージェントを実装します。
+This script implements a data analyst agent that uses DuckDB to analyze IMDB movie data and visualizes the statistics in ASCII art.
 
-主な機能:
-- DuckDBによる効率的なデータ分析
-- ヒストグラムのアスキーアート表示
-- 最適なバケットサイズの自動選択
-- 分析プロセスの詳細な説明
+Main features:
+- Efficient data analysis with DuckDB
+- ASCII art display of histograms
+- Automatic selection of optimal bucket size
+- Detailed description of the analysis process
 
-必要なパッケージのインストール:
+Installation of required packages:
 pip install duckdb
 """
 
@@ -20,40 +18,39 @@ import json
 from phi.model.openai import OpenAIChat
 from phi.agent.duckdb import DuckDbAgent
 
-# データアナリストエージェントの設定
+# Setting Up a Data Analyst Agent
 data_analyst = DuckDbAgent(
-    # GPT-4モデルの使用
+    # Using GPT-4 model
     model=OpenAIChat(model="gpt-4o"),
-    markdown=True,  # マークダウン形式での出力
-    # データモデルの定義
+    markdown=True,  # Output in Markdown format
+    # Defining the data model
     semantic_model=json.dumps(
         {
             "tables": [
                 {
                     "name": "movies",
-                    "description": "IMDBから取得した映画情報のデータセット。" \
-                                "評価点、公開年、ジャンルなどの情報を含む。",
+                    "description": "Dataset of movie information obtained from IMDB, including ratings, release year, genre, etc.",
                     "path": "https://phidata-public.s3.amazonaws.com/demo_data/IMDB-Movie-Data.csv",
                 }
             ]
         },
         indent=2,
     ),
-    # エージェントへの指示
+    # Instructions to the agent
     instructions=[
-        "分析手法の選択理由を明確に説明してください",
-        "データの特性を考慮した可視化を行ってください",
-        "統計的な意味を持つバケットサイズを選択してください",
-        "視覚的に分かりやすい表示を心がけてください"
+        "Clearly explain the reasons for selecting the analysis method",
+        "Visualize considering the characteristics of the data",
+        "Select a bucket size with statistical significance",
+        "Ensure the display is visually intuitive"
     ]
 )
 
-# 評価点の分布を分析
+# Analyze the distribution of ratings
 data_analyst.print_response(
     """
-    映画の評価点についてヒストグラムを作成してください。
-    適切なバケットサイズを選択し、その選択理由も説明してください。
-    結果はアスキーアートで見やすく表示してください。
+    Create a histogram for movie ratings.
+    Select an appropriate bucket size and explain the reason for your choice.
+    Display the results in an easy-to-view ASCII art.
     """,
-    stream=True  # 分析過程をリアルタイムで表示
+    stream=True  # Display the analysis process in real-time
 )
